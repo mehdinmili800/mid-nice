@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- *** Web *** -->
+
+    <div class="hidden xl:grid grid-cols-10 w-full h-[100px]  items-center bg-white">
+        <div class="text-[35px] font-keania-one col-span-2 flex justify-center">MID NICE</div>
+        <div class="text-[18px] col-span-6">
+            <div class="flex justify-center gap-5">
+                <a class=" w-[120px] h-[50px] flex justify-center items-center hover:bg-black hover:text-white hover:rounded-xl"
+                    [routerLink]="['/developer-company/home']">Home</a>
+                <a class=" w-[150px] h-[50px] flex justify-center items-center hover:bg-black hover:text-white hover:rounded-xl"
+                    [routerLink]="['/developer-company/about']">About Us</a>
+                <a class=" w-[120px] h-[50px] flex justify-center items-center hover:bg-black hover:text-white hover:rounded-xl"
+                    [routerLink]="['/developer-company/services']">Services</a>
+                <a class=" w-[160px] h-[50px] flex justify-center items-center hover:bg-black hover:text-white hover:rounded-xl"
+                    [routerLink]="['/developer-company/our-portfolio']">Our Portfolio</a>
+                <a class=" w-[120px] h-[50px] flex justify-center items-center hover:bg-black hover:text-white hover:rounded-xl"
+                    [routerLink]="['/developer-company/price']">Price</a>
+                <a class=" w-[120px] h-[50px] flex justify-center items-center hover:bg-black hover:text-white hover:rounded-xl"
+                    [routerLink]="['/developer-company/contact']">Contact</a>
+            </div>
+        </div>
+        <div class="flex justify-center gap-5 col-span-2">
+            <div><img class="size-[35px]" src="/assets/icons/facebook-round-color-icon.svg"></div>
+            <div><img class="size-[35px]" src="/assets/icons/black-instagram-icon.svg"></div>
+            <div><img class="size-[35px]" src="/assets/icons/youtube-icon.svg"></div>
+        </div>
+    </div>
+
+    <!-- *** Mobile *** -->
+
+    <div class="xl:hidden flex  justify-between items-center w-full h-[100px]  bg-white">
+        <div class="text-[35px] font-keania-one flex justify-center">MID NICE</div>
+        <div (click)="toggleMenu()">
+            <div><img class=" size-[35px]" src="/assets/icons/icons-web/menu.svg"></div>
+        </div>
+    </div>
+
+    <div [ngClass]="{'hidden': showMenu}" class="xl:hidden flex bg-white w-full rounded-b-[80px] justify-center ">
+        <div class="h-[700px] text-black text-[20px] font-medium  divide-y-4 divide-black/50 grid ">
+            <div class="w-screen flex justify-center items-center hover:bg-black hover:text-green-400 rounded-2xl"
+                [routerLink]="['/developer-company/home']">Home
+            </div>
+            <div class="w-screen flex justify-center items-center hover:bg-black hover:text-green-400 rounded-2xl"
+                [routerLink]="['/developer-company/about']">About
+                Us</div>
+            <div class="w-screen flex justify-center items-center hover:bg-black hover:text-green-400 rounded-2xl"
+                [routerLink]="['/developer-company/services']">Services
+            </div>
+            <div class="w-screen flex justify-center items-center hover:bg-black hover:text-green-400 rounded-2xl"
+                [routerLink]="['/developer-company/our-portfolio']">Our Portfolio
+            </div>
+            <div class="w-screen flex justify-center items-center hover:bg-black hover:text-green-400 rounded-2xl"
+                [routerLink]="['/developer-company/price']">Price
+            </div>
+            <div class="w-screen flex justify-center items-center hover:bg-black hover:text-green-400 rounded-2xl"
+                [routerLink]="['/developer-company/contact']">Contact</div>
+
+            <div class="flex justify-center items-center gap-10">
+                <div><img class="size-[35px]" src="/assets/icons/facebook-round-color-icon.svg"></div>
+                <div><img class="size-[35px]" src="/assets/icons/black-instagram-icon.svg"></div>
+                <div><img class="size-[35px]" src="/assets/icons/youtube-icon.svg"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

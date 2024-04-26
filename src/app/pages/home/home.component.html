@@ -1,0 +1,268 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!-- *** --- Page 1 --- *** -->
+
+
+  <div class="bg-gradient-to-t from-slate-300 to-slate-600 h-auto">
+
+    <!-- *** WEB *** -->
+    <div class="hidden xl:grid grid-cols-10  ">
+      <div class="col-span-5 grid grid-cols-10">
+        <div class="col-span-2"></div>
+        <div class="col-span-6 pt-[100px]">
+          <div class="font-medium text-[35px] tracking-in-contract-text-1">WEB DESIGN</div>
+          <div class="font-medium text-[35px] pl-[40px] tracking-in-contract-text-2">COMPANY IN</div>
+          <div class=" font-keania-one text-[60px] rounded-[30px]  ">
+            <div class=" ml-[100px] pl-[20px] w-[210px] rounded-[20px] tracking-in-contract-text-2">
+              <div class="tracking-in-contract-text-2 w-[210px] ">DUBAI</div>
+            </div>
+          </div>
+          <div class="mt-[100px] text-[25px] w-[500px] font-medium puff-in-center-description">HOW TO PROJECT YOUR
+            INFORMATION</div>
+          <div class="mt-[10px] h-[100px] text-[15px] w-[500px]  font-medium puff-in-center-description">DOLAR SIT
+            AMET , CONSECTOR ADIPT - SCING ELIT , SED DO EIUSMOD TEMPOR INCIDUCUNT UT LABORD ET DOLARE MAGNA
+            ALIQUA</div>
+          <div
+            class="mt-[10px] pl-[35px] pt-2  pb-2 text-[40px] bg-green-400 w-[350px] font-keania-one rounded-[20px] shake-horizontal-dubai">
+            <div class="puff-in-center-description" [routerLink]="['/developer-company/our-portfolio']">
+              <div  class="">
+                OUR PORTFOLIO
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" col-span-2"></div>
+      </div>
+      <div class=" col-span-5 grid grid-cols-10  puff-in-center-description">
+        <div class=" col-span-9">
+          <!-- move pictire ecrans -->
+
+          <div class="pt-[10px]">
+            <div class="w-full h-[300px] p-2">
+              <div class="bg-black w-full h-full p-2 rounded-2xl">
+                <div class="rounded-[20px] w-full h-full overflow-hidden">
+                  <div class="relative h-full">
+                    <img [src]="images[currentIndex]" alt="Image" class="w-full h-full object-cover">
+                    <button (click)="previousImage()"
+                      class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2">
+                      &lt;
+                    </button>
+                    <button (click)="nextImage()"
+                      class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2">
+                      &gt;
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- comopenent TECHNOLOGY -->
+          <div class="flex justify-center">
+            <div class="bg-white w-[400px] h-[200px] mt-5 p-3 rounded-[20px]">
+              <div class="bg-black w-full h-full rounded-[20px]">
+                <div class="text-white text-[50px] font-keania-one ml-[25px]">TECHNOLOGY</div>
+                <div class="flex gap-4">
+                  <img src="/assets/icons/icons-programing/html 1.svg">
+                  <img src="/assets/icons/icons-programing/Css.svg">
+                  <img src="/assets/icons/icons-programing/Social_javascript 1.svg">
+                  <img src="/assets/icons/icons-programing/angular.svg">
+                  <img src="/assets/icons/icons-programing/java.svg">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" col-span-1"></div>
+      </div>
+    </div>
+
+
+    <!-- *** Mobile *** -->
+
+    <div class="hidden xl-max:flex justify-center h-auto w-full ">
+
+      <!-- *** picture move -->
+
+      <div class="pt-[10px]">
+        <div class="w-full h-[300px] p-2">
+          <div class="bg-black w-[full] h-full p-2 rounded-2xl">
+            <div class="rounded-[20px] w-full h-full overflow-hidden">
+              <div class="relative h-full">
+                <img [src]="images[currentIndex]" alt="Image" class="w-full h-full object-cover">
+                <button (click)="previousImage()"
+                  class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2">
+                  &lt;
+                </button>
+                <button (click)="nextImage()"
+                  class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2">
+                  &gt;
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- *** Title *** -->
+
+        <div class="flex justify-around items-center pt-2">
+          <div class="text-[15px] font-medium">WEB DESIGN</div>
+          <div class="text-[30px] font-keania-one">DUBAI</div>
+          <div class="text-[15px] font-medium">COMPANY IN</div>
+        </div>
+
+        <div>
+          <!-- comopenent TECHNOLOGY -->
+          <div class="flex justify-center">
+            <div class="bg-white w-[300px] h-[120px] mt-5 p-1 rounded-[20px]">
+              <div class="bg-black w-full h-full rounded-[20px]">
+                <div class="text-white text-[35px] font-keania-one ml-[25px]">TECHNOLOGY</div>
+                <div class="flex gap-4 size-[40px]">
+                  <img src="/assets/icons/icons-programing/html 1.svg">
+                  <img src="/assets/icons/icons-programing/Css.svg">
+                  <img src="/assets/icons/icons-programing/Social_javascript 1.svg">
+                  <img src="/assets/icons/icons-programing/angular.svg">
+                  <img src="/assets/icons/icons-programing/java.svg">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Description -->
+
+        <div class="grid grid-cols-10">
+          <div class="col-span-1"></div>
+          <div class="col-span-8">
+            <div class="font-normal pt-3">
+              HOW TO PROJECT YOUR INFORMATION
+            </div>
+            <div class="text-[10px] pt-3">
+              DOLAR SIT AMET , CONSECTOR ADIPT - SCING ELIT , SED DO EIUSMOD TEMPOR INCIDUCUNT UT LABORD ET DOLARE MAGNA
+              ALIQUA
+            </div>
+          </div>
+          <div class="col-span-1"></div>
+        </div>
+
+        <!-- Button -->
+
+        <div class="pt-[20px] flex justify-center">
+          <div class="bg-green-400 w-[200px] h-[50px] flex justify-center items-center rounded-[10px]">
+            <div class="font-keania-one text-[20px]" [routerLink]="['/developer-company/our-portfolio']">OUR PORTFOLIO</div>
+          </div>
+        </div>
+        <div class="pt-[30px]"></div>
+      </div>
+
+    </div>
+
+
+
+    <!-- *** --- Page 1 --- *** -->
+
+    <!-- divider -->
+
+    <div class="grid grid-cols-10 pt-5">
+      <div class="col-span-1"></div>
+      <div class="bg-black  h-1 col-span-8"></div>
+      <div class="col-span-1"></div>
+
+    </div>
+
+
+    <!-- Contact -->
+
+
+    <div class="pt-5 p-5">
+      <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
+        aria-hidden="true">
+        <div
+          class="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
+          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+        </div>
+      </div>
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contact sales</h2>
+        <p class="mt-2 text-lg leading-8 text-gray-600">Aute magna irure deserunt veniam aliqua magna enim voluptate.
+        </p>
+      </div>
+      <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
+        <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+          <div>
+            <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">First name</label>
+            <div class="mt-2.5">
+              <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+          <div>
+            <label for="last-name" class="block text-sm font-semibold leading-6 text-gray-900">Last name</label>
+            <div class="mt-2.5">
+              <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">Company</label>
+            <div class="mt-2.5">
+              <input type="text" name="company" id="company" autocomplete="organization"
+                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Email</label>
+            <div class="mt-2.5">
+              <input type="email" name="email" id="email" autocomplete="email"
+                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="phone-number" class="block text-sm font-semibold leading-6 text-gray-900">Phone number</label>
+            <div class="relative mt-2.5">
+
+              <input type="tel" name="phone-number" id="phone-number" autocomplete="tel"
+                class="block w-full rounded-md border-0 px-3.5 py-2  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="message" class="block text-sm font-semibold leading-6 text-gray-900">Message</label>
+            <div class="mt-2.5">
+              <textarea name="message" id="message" rows="4"
+                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+            </div>
+          </div>
+
+        </div>
+        <div class="mt-10">
+          <button type="submit"
+            class="block w-full rounded-md bg-green-400 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit</button>
+        </div>
+      </form>
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
