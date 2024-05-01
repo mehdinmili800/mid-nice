@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
+import { items } from 'src/app/data/data-portfolio';
 
 @Component({
   selector: 'app-our-portfolio',
@@ -8,22 +9,11 @@ import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 export class OurPortfolioComponent implements OnInit {
   @ViewChild('scrollContainer') scrollContainer!: ElementRef;
 
-  
+  openWebsite(url: string) {
+    window.open(url, '_blank');
+  }
 
-  items = [
-    { firstName: 'Hotel 1', websiteType: 'Hotel Website', imageUrl: '/assets/picture web site/pciture template website 2.jpg', category: 'WEBSITES' },
-    { firstName: 'Hotel 2', websiteType: 'Hotel Website', imageUrl: '/assets/picture web site/picture template website 3.jpg', category: 'WEBSITES' },
-    { firstName: 'Restaurant 1', websiteType: 'Restaurant Website', imageUrl: '/assets/picture web site/picture template website 4.jpg', category: 'WEBSITES' },
-    { firstName: 'Restaurant 2', websiteType: 'Restaurant Website', imageUrl: '/assets/picture web site/picture template website 5.jpg', category: 'WEBSITES' },
-    { firstName: 'Fitness', websiteType: 'Fitness Website', imageUrl: '/assets/picture web site/picture template website 6.jpg', category: 'WEBSITES' },
-    { firstName: 'Hospital Backend', websiteType: 'Hospital Backend', imageUrl: '/assets/picture web site/picture template website 6.jpg', category: 'BACKEND' },
-    { firstName: 'School Backend', websiteType: 'School Backend', imageUrl: '/assets/picture web site/picture template website 6.jpg', category: 'BACKEND' },
-    { firstName: 'Design 1', websiteType: 'Design', imageUrl: '/assets/picture web site/picture template website 6.jpg', category: 'DESIGN' },
-    { firstName: 'Design 2', websiteType: 'Design', imageUrl: '/assets/picture web site/picture template website 6.jpg', category: 'DESIGN' },
-    { firstName: 'E-commerce 1', websiteType: 'E-commerce Website', imageUrl: '/assets/picture web site/picture template website 6.jpg', category: 'E-COMMERCE' },
-    { firstName: 'E-commerce 2', websiteType: 'E-commerce Website', imageUrl: '/assets/picture web site/picture template website 6.jpg', category: 'E-COMMERCE' }
-    // Add more objects for each item
-  ];
+  items = items;
 
   scrollLeft() {
     this.scrollContainer.nativeElement.scrollBy({ left: -400, behavior: 'smooth' });
@@ -40,7 +30,7 @@ export class OurPortfolioComponent implements OnInit {
   showDropdown: boolean = false; // Variable to control the visibility of the dropdown
 
   categoryOptions: { [key: string]: string[] } = {
-    'WEBSITES': ['Hotel', 'Restaurant', 'Fitness'],
+    'WEBSITES': ['Hospital', 'Sport', 'Industry'],
     'BACKEND': ['Hospital', 'School'],
     'DESIGN': ['Design 1', 'Design 2'],
     'E-COMMERCE': ['E-commerce 1', 'E-commerce 2']
@@ -49,6 +39,17 @@ export class OurPortfolioComponent implements OnInit {
   ngOnInit() {
     // Filter items based on the default selected category on component initialization
     this.filteredItems = this.items.filter(item => item.category === this.selectedCategory);
+
+    // Shuffle the order of the filtered items randomly
+    this.shuffleItems();
+  }
+
+  shuffleItems() {
+    // Fisher-Yates shuffle algorithm
+    for (let i = this.filteredItems.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [this.filteredItems[i], this.filteredItems[j]] = [this.filteredItems[j], this.filteredItems[i]];
+    }
   }
 
   selectCategory(category: string) {
